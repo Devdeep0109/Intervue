@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intervue</title>
+    <!--Tailwind css configuration-->
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sora: ['Sora', 'sans-serif'],
+                    },
+                    colors: {
+                        'badge-blue': '#3b82f6',
+                        'badge-orange': '#f97316',
+                        'badge-green': '#10b981',
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!--External css-->
+    <link rel="stylesheet" href="landingPage.css">
+
+</head>
+<body class="font-sora">
+    <!--            Navbar                        -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                
+                <div class="flex items-center">
+                    <!-- Logo -->
+                    <div class="flex-shrink-0 flex items-center font-medium">
+                        INTERVUE
+                    </div>
+                    
+                </div>
+                
+                <!-- buttons - Desktop -->
+                <div class="hidden md:flex items-center space-x-4">
+                        <a href="#" class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            <i class="fas fa-user mr-2"></i> Become an Interviewer 
+                            <i class="fas fa-arrow-up-right-from-square ml-2 text-xs"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-gray-900 px-1 pt-1 text-sm font-medium">Pricing</a>
+                        <a href="#" class="text-gray-500 hover:text-gray-900 px-1 pt-1 text-sm font-medium">Features</a>
+                        <a href="#" class="text-gray-500 hover:text-gray-900 px-1 pt-1 text-sm font-medium">Start a Trial</a>
+
+                    <a href="#" class="btn-login border border-black text-black px-4 py-2  text-sm font-medium transition duration-300">Login</a>
+                    <a href="#" class="btn-signup border border-black text-black px-4 py-2  text-sm font-medium transition duration-300">Sign Up</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Hamburger icon -->
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <!-- Close icon -->
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="#" class="text-gray-900 hover:bg-gray-50 block px-3 py-2 text-base font-medium">
+                    <i class="fas fa-user mr-2"></i> Become an Interviewer 
+                    <i class="fas fa-arrow-up-right-from-square ml-2 text-xs"></i>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-gray-900 hover:bg-gray-50 block px-3 py-2 text-base font-medium">Features</a>
+                <a href="#" class="text-gray-500 hover:text-gray-900 hover:bg-gray-50 block px-3 py-2 text-base font-medium">Pricing</a>
+                <a href="#" class="text-gray-500 hover:text-gray-900 hover:bg-gray-50 block px-3 py-2 text-base font-medium">Start a Trial</a>
+            </div>
+            <div class="border-t border-gray-200 pt-4 pb-3">
+                <div class="space-y-1 px-2">
+                    <a href="#" class="btn-login block border border-black text-black px-4 py-2 rounded-md text-base font-medium text-center transition duration-300">Login</a>
+                    <a href="#" class="btn-signup block border border-black text-black px-4 py-2 rounded-md text-base font-medium text-center transition duration-300 mt-2">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!--                 Search bar              -->
+    <div class="max-w-3xl mx-auto text-center pt-24 px-4 sm:px-6 lg:px-8">
+  <!-- Heading -->
+  <h1 class="text-3xl  text-gray-900 mb-2">Technical Interview Resources</h1>
+  
+  <!-- Subtext -->
+  <p class="text-lg text-gray-600 mb-8">Find all the technical resources here</p>
+  
+  <!-- Search Bar -->
+  <div class="relative max-w-md mx-auto">
+    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+      <!-- Search Icon -->
+      <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+      </svg>
+    </div>
+    <!-- Input Field -->
+    <input 
+      type="text" 
+      placeholder="Search for resource here" 
+      class="block w-full pl-10 pr-3 py-3  bg-gray-100 border-gray-300 rounded-full text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+    >
+  </div>
+</div>
+
+
+
+    <!--                card                     -->
+    <div class="container mx-auto px-4 py-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <!-- Easy Card (hidden on mobile) -->
+    <div class="hidden md:block border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+      <div class="p-4 flex items-center gap-3">
+        <span class="inline-block px-2 py-1 text-xs font-semibold text-white rounded bg-badge-blue">Easy</span>
+        <p class="text-sm font-medium text-gray-700">DATA STRUCTURES AND ALGORITHMS</p>
+      </div>
+      <div class="p-6">
+        <h3 class="text-lg font-bold mb-2">Design a food App</h3>
+        <p class="text-gray-600">We created this guide after speaking to our community...</p>
+      </div>
+    </div>
+
+    <!-- Medium Card -->
+    <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+      <div class="p-4 flex items-center gap-3">
+        <span class="inline-block px-2 py-1 text-xs font-semibold text-white rounded bg-badge-orange">Medium</span>
+        <p class="text-sm font-medium text-gray-700">DATA STRUCTURES AND ALGORITHMS</p>
+      </div>
+      <div class="p-6">
+        <h3 class="text-lg font-bold mb-2">Design a food App</h3>
+        <p class="text-gray-600">We created this guide after speaking to our community...</p>
+      </div>
+    </div>
+
+    <!-- Hard Card (hidden on mobile) -->
+    <div class="hidden md:block border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+      <div class="p-4 flex items-center gap-3">
+        <span class="inline-block px-2 py-1 text-xs font-semibold text-white rounded bg-badge-green">Hard</span>
+        <p class="text-sm font-medium text-gray-700">DATA STRUCTURES AND ALGORITHMS</p>
+      </div>
+      <div class="p-6">
+        <h3 class="text-lg font-bold mb-2">Design a food App</h3>
+        <p class="text-gray-600">We created this guide after speaking to our community...</p>
+      </div>
+    </div>
+
+    <!-- Easy Card (hidden on mobile) -->
+    <div class="hidden md:block border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+      <div class="p-4 flex items-center gap-3">
+        <span class="inline-block px-2 py-1 text-xs font-semibold text-white rounded bg-badge-blue">Easy</span>
+        <p class="text-sm font-medium text-gray-700">DATA STRUCTURES AND ALGORITHMS</p>
+      </div>
+      <div class="p-6">
+        <h3 class="text-lg font-bold mb-2">Design a food App</h3>
+        <p class="text-gray-600">We created this guide after speaking to our community...</p>
+      </div>
+    </div>
+
+    <!-- Medium Card -->
+    <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+      <div class="p-4 flex items-center gap-3">
+        <span class="inline-block px-2 py-1 text-xs font-semibold text-white rounded bg-badge-orange">Medium</span>
+        <p class="text-sm font-medium text-gray-700">DATA STRUCTURES AND ALGORITHMS</p>
+      </div>
+      <div class="p-6">
+        <h3 class="text-lg font-bold mb-2">Design a food App</h3>
+        <p class="text-gray-600">We created this guide after speaking to our community...</p>
+      </div>
+    </div>
+
+    <!-- Hard Card (hidden on mobile) -->
+    <div class="hidden md:block border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+      <div class="p-4 flex items-center gap-3">
+        <span class="inline-block px-2 py-1 text-xs font-semibold text-white rounded bg-badge-green">Hard</span>
+        <p class="text-sm font-medium text-gray-700">DATA STRUCTURES AND ALGORITHMS</p>
+      </div>
+      <div class="p-6">
+        <h3 class="text-lg font-bold mb-2">Design a food App</h3>
+        <p class="text-gray-600">We created this guide after speaking to our community...</p>
+      </div>
+    </div>
+
+    <!-- Easy Card (hidden on mobile) -->
+    <div class="hidden md:block border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+      <div class="p-4 flex items-center gap-3">
+        <span class="inline-block px-2 py-1 text-xs font-semibold text-white rounded bg-badge-blue">Easy</span>
+        <p class="text-sm font-medium text-gray-700">DATA STRUCTURES AND ALGORITHMS</p>
+      </div>
+      <div class="p-6">
+        <h3 class="text-lg font-bold mb-2">Design a food App</h3>
+        <p class="text-gray-600">We created this guide after speaking to our community...</p>
+      </div>
+    </div>
+
+    <!-- Medium Card -->
+    <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+      <div class="p-4 flex items-center gap-3">
+        <span class="inline-block px-2 py-1 text-xs font-semibold text-white rounded bg-badge-orange">Medium</span>
+        <p class="text-sm font-medium text-gray-700">DATA STRUCTURES AND ALGORITHMS</p>
+      </div>
+      <div class="p-6">
+        <h3 class="text-lg font-bold mb-2">Design a food App</h3>
+        <p class="text-gray-600">We created this guide after speaking to our community...</p>
+      </div>
+    </div>
+
+    <!-- Hard Card (hidden on mobile) -->
+    <div class="hidden md:block border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+      <div class="p-4 flex items-center gap-3">
+        <span class="inline-block px-2 py-1 text-xs font-semibold text-white rounded bg-badge-green">Hard</span>
+        <p class="text-sm font-medium text-gray-700">DATA STRUCTURES AND ALGORITHMS</p>
+      </div>
+      <div class="p-6">
+        <h3 class="text-lg font-bold mb-2">Design a food App</h3>
+        <p class="text-gray-600">We created this guide after speaking to our community...</p>
+      </div>
+    </div>
+
+  </div>
+    </div>
+
+
+
+    <!--           Security Section              -->
+    <div class="bg-gray-100 mt-20 py-20 px-6 sm:px-8 lg:px-20 font-sora">
+    <div class="max-w-7xl mx-auto text-center md:text-left">
+
+        <h2 class="text-xl text-gray-800 mb-2">Security is our top priority</h2>
+
+        <p class="text-gray-600 mb-10">
+        Intervue serves startup to fortune 500 companies with<br>
+        enterprise grade baked by design
+        </p>
+
+        <div class="md:flex md:space-x-8 max-w-5xl">
+
+        <!-- Card 1 -->
+        <div class="bg-white p-6 rounded-lg shadow relative text-left flex-1 mb-8 md:mb-0">
+            <div class="text-black text-3xl mb-4">
+            <i class="fas fa-key"></i>
+            </div>
+            <h3 class="text-lg text-gray-900 mb-2">Security</h3>
+            <p class="text-gray-600 mb-12">
+            Protecting your data at every layer is fundamental to how intervue works
+            </p>
+            <div class="absolute bottom-6 right-6 text-black text-xl">
+            <i class="fas fa-arrow-right"></i>
+            </div>
+        </div>
+
+        <!-- Card 2-->
+        <div class="bg-white p-6 rounded-lg shadow relative text-left flex-1 mb-8 md:mb-0">
+            <div class="text-black text-3xl mb-4">
+            <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="text-lg text-gray-900 mb-2">Compliances</h3>
+            <p class="text-gray-600 mb-12">
+            Enterprise grade compliance commitment where we have established controls to adhere to those commitments
+            </p>
+            <div class="absolute bottom-6 right-6 text-black text-xl">
+            <i class="fas fa-arrow-right"></i>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="flex flex-col space-y-6 flex-1">
+
+            <!-- Subcard 3.1 -->
+            <div class="bg-white p-4 rounded-lg shadow flex flex-col items-start justify-between relative">
+            <div class="text-black text-2xl mb-3">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <h3 class="text-lg text-gray-900 mb-8">Intervue for Startup</h3>
+            <div class="absolute bottom-4 right-4 text-black text-xl">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            </div>
+
+            <!-- Subcard 3.2 -->
+            <div class="bg-white p-4 rounded-lg shadow flex flex-col items-start justify-between relative">
+            <div class="text-black text-2xl mb-3">
+                <i class="fas fa-globe"></i>
+            </div>
+            <h3 class="text-lg text-gray-900 mb-8">Intervue for Enterprises</h3>
+            <div class="absolute bottom-4 right-4 text-black text-xl">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            </div>
+
+        </div>
+        </div>
+
+    </div>
+    </div>
+
+
+
+
+    <!--            customer review                   -->
+    <div class="bg-gray-100 py-16 px-6 sm:px-8 lg:px-20 font-sora">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
+            
+            <!-- Video Div -->
+            <div class="bg-gray-300 rounded-r-full overflow-hidden w-full md:w-1/2 h-64 flex items-center justify-center">
+            <!-- Replace with actual video element or thumbnail if needed -->
+            <video class="w-full h-full object-cover" autoplay>
+                <source src="your-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            </div>
+
+            <!-- Text Content -->
+            <div class="w-full md:w-1/2 space-y-4 text-left">
+            <p class="text-gray-700 text-lg">
+                “After interviewing candidates on Intervue, we were able to convert at least 5% of people from our application base to hire.”
+            </p>
+            <h3 class="text-xl font-semibold text-gray-900">Niket Gupta</h3>
+            <p class="text-gray-600">Group head of talent acquisition, Yubi</p>
+            <a href="#" class="text-blue-400 font-medium flex items-center space-x-2 hover:underline">
+                <span>See more customer stories</span>
+                <i class="fas fa-arrow-right text-sm"></i>
+            </a>
+            </div>
+            
+        </div>
+    </div>
+
+
+
+
+    <!--            know more about                  -->
+    <div class="rounded-lg py-12 px-6 sm:px-8 lg:px-20 font-sora max-w-7xl mx-auto mt-16">
+        <h2 class="text-2xl text-center font-semibold text-gray-800 mb-10">
+            Explore more products of Intervue
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <div class="p-6 rounded-lg border hover:shadow-[6px_6px_12px_rgba(0,0,0,0.1)] transition-shadow duration-300">
+            <img src="your-image1.jpg" alt="Product 1" class="rounded-md mb-4 w-full h-40 object-cover" />
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">On Demand</h3>
+            <p class="text-gray-600 mb-6">
+                Save 90% of engineering & recruitment bandwidth, outsource candidate interview to us
+            </p>
+            <a href="#" class="text-blue-400 flex items-center space-x-2 hover:underline">
+                <span>Know more</span>
+                <i class="fas fa-arrow-right text-sm"></i>
+            </a>
+            </div>
+
+            <div class="p-6 rounded-lg border hover:shadow-[6px_6px_12px_rgba(0,0,0,0.1)] transition-shadow duration-300">
+            <img src="your-image2.jpg" alt="Product 2" class="rounded-md mb-4 w-full h-40 object-cover" />
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">On Demand</h3>
+            <p class="text-gray-600 mb-6">
+                Save 90% of engineering & recruitment bandwidth, outsource candidate interview to us
+            </p>
+            <a href="#" class="text-blue-400 flex items-center space-x-2 hover:underline">
+                <span>Know more</span>
+                <i class="fas fa-arrow-right text-sm"></i>
+            </a>
+            </div>
+
+            <div class="p-6 rounded-lg border hover:shadow-[6px_6px_12px_rgba(0,0,0,0.1)] transition-shadow duration-300">
+            <img src="your-image3.jpg" alt="Product 3" class="rounded-md mb-4 w-full h-40 object-cover" />
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">On Demand</h3>
+            <p class="text-gray-600 mb-6">
+                Save 90% of engineering & recruitment bandwidth, outsource candidate interview to us
+            </p>
+            <a href="#" class="text-blue-400 flex items-center space-x-2 hover:underline">
+                <span>Know more</span>
+                <i class="fas fa-arrow-right text-sm"></i>
+            </a>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- FAQs-->
+    <!-- FAQ Section -->
+<div class="bg-[#F5E7E7] max-w-7xl mx-auto px-6 sm:px-8 lg:px-20 py-16 font-sora">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+    <!-- Left Section for Desktop -->
+    <div class="hidden md:block">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">FAQs</h2>
+      <p class="text-gray-600 mb-6">
+        Here are frequently asked questions to clear all the doubts.
+      </p>
+      <p class="text-gray-700 mb-4">Still have doubts?</p>
+      <div class="flex items-center space-x-3 text-blue-400">
+        <i class="fas fa-phone text-lg"></i>
+        <p class="text-sm">Talk to our representative</p>
+      </div>
+    </div>
+
+    <!-- Right Section (Questions) -->
+    <div class="space-y-6">
+
+      <!-- Mobile Heading and Description -->
+      <div class="md:hidden">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">FAQs</h2>
+        <p class="text-gray-600 mb-6">
+          Here are frequently asked questions to clear all the doubts.
+        </p>
+      </div>
+
+      <hr class="border-black border-1">
+
+      <!-- Question 1 -->
+      <div>
+        <div class="flex justify-between items-center text-left md:cursor-pointer" onclick="toggleFAQ(0)">
+          <h3 class="text-md font-medium text-gray-800">How do I schedule an interview?</h3>
+          <i class="fas fa-plus faq-toggle-icon text-gray-700 hidden md:inline-block"></i>
+        </div>
+        <p class="mt-2 text-gray-700 faq-answer hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, suscipit.</p>
+        <p class="mt-2 text-gray-700 block md:hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, suscipit.</p>
+      </div>
+
+      <hr class="border-black border-1">
+
+      <!-- Question 2 -->
+      <div>
+        <div class="flex justify-between items-center text-left md:cursor-pointer" onclick="toggleFAQ(1)">
+          <h3 class="text-md font-medium text-gray-800">Will I be charged per interview?</h3>
+          <i class="fas fa-plus faq-toggle-icon text-gray-700 hidden md:inline-block"></i>
+        </div>
+        <p class="mt-2 text-gray-700 faq-answer hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, suscipit.</p>
+        <p class="mt-2 text-gray-700 block md:hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, suscipit.</p>
+      </div>
+
+      <hr class="border-black border-1">
+
+      <!-- Question 3 -->
+      <div>
+        <div class="flex justify-between items-center text-left md:cursor-pointer" onclick="toggleFAQ(2)">
+          <h3 class="text-md font-medium text-gray-800">Can I get a trial for on-demand interviews?</h3>
+          <i class="fas fa-plus faq-toggle-icon text-gray-700 hidden md:inline-block"></i>
+        </div>
+        <p class="mt-2 text-gray-700 faq-answer hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, suscipit.</p>
+        <p class="mt-2 text-gray-700 block md:hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, suscipit.</p>
+      </div>
+
+      <!-- Mobile "Still have doubts?" section (only visible in mobile) -->
+      <div class="block md:hidden pt-6">
+        <p class="text-gray-700 mb-4">Still have doubts?</p>
+        <div class="flex items-center space-x-3 text-blue-400">
+          <i class="fas fa-phone text-lg"></i>
+          <p class="text-sm">Talk to our representative</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+    <!--               Footer               -->
+    <div class="bg-[#27282C] text-white py-10 px-6 sm:px-12 font-sora">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+
+    <div class="space-y-6 md:mr-10">
+      <h2 class="text-2xl font-bold">Intervue</h2>
+
+      <div class="hidden md:flex space-x-4 text-xl text-gray-300 pt-2">
+        <i class="fab fa-facebook cursor-pointer hover:text-blue-500"></i>
+        <i class="fab fa-instagram cursor-pointer hover:text-pink-500"></i>
+        <i class="fab fa-linkedin cursor-pointer hover:text-blue-400"></i>
+        <i class="fab fa-pinterest cursor-pointer hover:text-red-500"></i>
+      </div>
+
+      <h3 class="text-md text-yellow-400 font-semibold">Hire better & faster</h3>
+      <div class="relative w-full max-w-xs">
+        <input type="text" placeholder="Your email"
+               class="w-full bg-transparent border-b border-gray-500 py-2 pl-2 pr-10 focus:outline-none text-white placeholder-gray-400" />
+        <i class="fas fa-paper-plane absolute top-2 right-3 text-yellow-400 cursor-pointer"></i>
+      </div>
+    </div>
+
+    <!-- Link Sections -->
+    <div class="md:col-span-3">
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10">
+        <div>
+          <h4 class="font-bold text-lg mb-2">Company</h4>
+          <ul class="space-y-2 text-sm text-gray-300">
+            <li><a href="#" class="hover:text-yellow-400">fdvfdb</a></li>
+            <li><a href="#" class="hover:text-yellow-400">dvfdvdv</a></li>
+            <li><a href="#" class="hover:text-yellow-400">fdhvfj</a></li>
+            <li><a href="#" class="hover:text-yellow-400">hgdsbcdsj</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+          <h4 class="font-bold text-lg mb-2">Resources</h4>
+          <ul class="space-y-2 text-sm text-gray-300">
+            <li><a href="#" class="hover:text-yellow-400">Blog</a></li>
+            <li><a href="#" class="hover:text-yellow-400">FAQ</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Lift Media</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Offence Stellen</a></li>
+          </ul>
+        </div>
+
+        <!-- Product 1 -->
+        <div>
+          <h4 class="font-bold text-lg mb-2">Product</h4>
+          <ul class="space-y-2 text-sm text-gray-300">
+            <li><a href="#" class="hover:text-yellow-400">Blog</a></li>
+            <li><a href="#" class="hover:text-yellow-400">FAQ</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Lift Media</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Offence Stellen</a></li>
+          </ul>
+        </div>
+
+        <!-- Product 2 -->
+        <div>
+          <h4 class="font-bold text-lg mb-2">Product</h4>
+          <ul class="space-y-2 text-sm text-gray-300">
+            <li><a href="#" class="hover:text-yellow-400">Blog</a></li>
+            <li><a href="#" class="hover:text-yellow-400">FAQ</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Lift Media</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Offence Stellen</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex md:hidden justify-center mt-10 space-x-6 text-xl text-gray-300">
+    <i class="fab fa-facebook cursor-pointer hover:text-blue-500"></i>
+    <i class="fab fa-instagram cursor-pointer hover:text-pink-500"></i>
+    <i class="fab fa-linkedin cursor-pointer hover:text-blue-400"></i>
+    <i class="fab fa-pinterest cursor-pointer hover:text-red-500"></i>
+  </div>
+
+  <!-- Bottom Row -->
+  <div class="mt-10 pt-6 border-t border-gray-600 text-sm text-gray-400">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3">
+      <p>@2023 Intervue. Crafted by great minds</p>
+      <div class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-1">
+        <p>fdhvbej</p>
+        <p>dchde ecn</p>
+        <p>Cookie Policy</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    <!-- JavaScript for FAQs -->
+    <script>
+    function toggleFAQ(index) {
+        const answers = document.querySelectorAll('.faq-answer');
+        const icons = document.querySelectorAll('.faq-toggle-icon');
+
+        answers[index].classList.toggle('hidden');
+        icons[index].classList.toggle('fa-plus');
+        icons[index].classList.toggle('fa-minus');
+    }
+    </script>
+
+
+    <!-- JavaScript for mobile menu toggle -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const hamburgerIcon = this.querySelector('svg:first-child');
+            const closeIcon = this.querySelector('svg:last-child');
+            
+            // Toggle menu visibility
+            mobileMenu.classList.toggle('hidden');
+            
+            // Toggle icons
+            hamburgerIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

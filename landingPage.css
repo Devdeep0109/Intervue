@@ -1,0 +1,10 @@
+/* navbar */
+.btn-login:hover {
+    background-color: black;
+    color: white;
+}
+
+.btn-signup:hover {
+    background-color: black;
+    color: white;
+}
