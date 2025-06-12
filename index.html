@@ -32,17 +32,17 @@
 
 </head>
 <body class="font-sora">
+  <div class="w-screen md:w-full overflow-hidden">
+
+  
     <!--            Navbar                        -->
     <nav class="bg-white shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 
                 <div class="flex items-center">
-                    <!-- Logo -->
-                    <div class="flex-shrink-0 flex items-center font-medium">
-                        INTERVUE
-                    </div>
-                    
+                  <!-- Logo -->
+                  <img src="https://d2b1cooxpkirg1.cloudfront.net/publicAssets/intervue.svg" alt="Intervue Logo" class="h-6 w-auto" />                    
                 </div>
                 
                 <!-- buttons - Desktop -->
@@ -55,8 +55,12 @@
                         <a href="#" class="text-gray-500 hover:text-gray-900 px-1 pt-1 text-sm font-medium">Features</a>
                         <a href="#" class="text-gray-500 hover:text-gray-900 px-1 pt-1 text-sm font-medium">Start a Trial</a>
 
-                    <a href="#" class="btn-login border border-black text-black px-4 py-2  text-sm font-medium transition duration-300">Login</a>
-                    <a href="#" class="btn-signup border border-black text-black px-4 py-2  text-sm font-medium transition duration-300">Sign Up</a>
+                        <a href="#" class="border border-black text-black px-4 py-2 text-sm font-medium transition duration-300 hover:bg-white hover:text-blue-600">
+                          Login
+                        </a>
+                        <a href="#" class="bg-black text-white px-4 py-2 text-sm font-medium">
+                        Sign Up
+                        </a>
                 </div>
                 
                 <!-- Mobile menu button -->
@@ -89,8 +93,9 @@
             </div>
             <div class="border-t border-gray-200 pt-4 pb-3">
                 <div class="space-y-1 px-2">
-                    <a href="#" class="btn-login block border border-black text-black px-4 py-2 rounded-md text-base font-medium text-center transition duration-300">Login</a>
-                    <a href="#" class="btn-signup block border border-black text-black px-4 py-2 rounded-md text-base font-medium text-center transition duration-300 mt-2">Sign Up</a>
+                    <a href="#" class="block border border-black text-black px-4 py-2 rounded-md text-base font-medium text-center transition duration-300 hover:bg-white hover:text-blue-600">Login</a>
+                    <a href="#" class="block bg-black text-white px-4 py-2 rounded-md text-base font-medium text-center mt-2">
+                      Sign Up</a>
                 </div>
             </div>
         </div>
@@ -129,116 +134,175 @@
     <div class="container mx-auto px-4 py-12">
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-    <!-- Easy Card (hidden on mobile) -->
-    <div class="hidden md:block border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-      <div class="p-4 flex items-center gap-3">
-        <span class="inline-block px-2 py-1 text-xs font-semibold text-white rounded bg-badge-blue">Easy</span>
-        <p class="text-sm font-medium text-gray-700">DATA STRUCTURES AND ALGORITHMS</p>
+    <!-- Easy Card -->
+    <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
+      <div class="flex items-center gap-3 px-5 pt-5 mb-4">
+        <span class="inline-block px-2.5 py-1 text-xs font-semibold text-white rounded-md bg-blue-500">Easy</span>
+        <p class="text-xs font-medium text-gray-700 uppercase tracking-wide">Data Structures and Algorithms</p>
       </div>
-      <div class="p-6">
-        <h3 class="text-lg font-bold mb-2">Design a food App</h3>
-        <p class="text-gray-600">We created this guide after speaking to our community...</p>
-      </div>
-    </div>
-
-    <!-- Medium Card -->
-    <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-      <div class="p-4 flex items-center gap-3">
-        <span class="inline-block px-2 py-1 text-xs font-semibold text-white rounded bg-badge-orange">Medium</span>
-        <p class="text-sm font-medium text-gray-700">DATA STRUCTURES AND ALGORITHMS</p>
-      </div>
-      <div class="p-6">
-        <h3 class="text-lg font-bold mb-2">Design a food App</h3>
-        <p class="text-gray-600">We created this guide after speaking to our community...</p>
-      </div>
-    </div>
-
-    <!-- Hard Card (hidden on mobile) -->
-    <div class="hidden md:block border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-      <div class="p-4 flex items-center gap-3">
-        <span class="inline-block px-2 py-1 text-xs font-semibold text-white rounded bg-badge-green">Hard</span>
-        <p class="text-sm font-medium text-gray-700">DATA STRUCTURES AND ALGORITHMS</p>
-      </div>
-      <div class="p-6">
-        <h3 class="text-lg font-bold mb-2">Design a food App</h3>
-        <p class="text-gray-600">We created this guide after speaking to our community...</p>
-      </div>
-    </div>
-
-    <!-- Easy Card (hidden on mobile) -->
-    <div class="hidden md:block border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-      <div class="p-4 flex items-center gap-3">
-        <span class="inline-block px-2 py-1 text-xs font-semibold text-white rounded bg-badge-blue">Easy</span>
-        <p class="text-sm font-medium text-gray-700">DATA STRUCTURES AND ALGORITHMS</p>
-      </div>
-      <div class="p-6">
-        <h3 class="text-lg font-bold mb-2">Design a food App</h3>
-        <p class="text-gray-600">We created this guide after speaking to our community...</p>
+      <div class="px-5 pb-4">
+        <h3 class="text-base font-medium mb-2 text-gray-800">Design a Free Food App</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          We created this guide after speaking to our community of interviewees, including over 100 current and former Amazon engineers, as well as our corpus of mock interviews.
+        </p>
       </div>
     </div>
 
     <!-- Medium Card -->
-    <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-      <div class="p-4 flex items-center gap-3">
-        <span class="inline-block px-2 py-1 text-xs font-semibold text-white rounded bg-badge-orange">Medium</span>
-        <p class="text-sm font-medium text-gray-700">DATA STRUCTURES AND ALGORITHMS</p>
+    <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
+      <div class="flex items-center gap-3 px-5 pt-5 mb-4">
+        <span class="inline-block px-2.5 py-1 text-xs font-semibold text-white rounded-md bg-orange-500">Medium</span>
+        <p class="text-xs font-medium text-gray-700 uppercase tracking-wide">Data Structures and Algorithms</p>
       </div>
-      <div class="p-6">
-        <h3 class="text-lg font-bold mb-2">Design a food App</h3>
-        <p class="text-gray-600">We created this guide after speaking to our community...</p>
-      </div>
-    </div>
-
-    <!-- Hard Card (hidden on mobile) -->
-    <div class="hidden md:block border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-      <div class="p-4 flex items-center gap-3">
-        <span class="inline-block px-2 py-1 text-xs font-semibold text-white rounded bg-badge-green">Hard</span>
-        <p class="text-sm font-medium text-gray-700">DATA STRUCTURES AND ALGORITHMS</p>
-      </div>
-      <div class="p-6">
-        <h3 class="text-lg font-bold mb-2">Design a food App</h3>
-        <p class="text-gray-600">We created this guide after speaking to our community...</p>
+      <div class="px-5 pb-4">
+        <h3 class="text-base font-medium mb-2 text-gray-800">Design a Food App</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          We created this guide after speaking to our community of interviewees, including over 100 current and former Amazon engineers, as well as our corpus of mock interviews.
+        </p>
       </div>
     </div>
 
-    <!-- Easy Card (hidden on mobile) -->
-    <div class="hidden md:block border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-      <div class="p-4 flex items-center gap-3">
-        <span class="inline-block px-2 py-1 text-xs font-semibold text-white rounded bg-badge-blue">Easy</span>
-        <p class="text-sm font-medium text-gray-700">DATA STRUCTURES AND ALGORITHMS</p>
+    <!-- Hard Card -->
+    <div class="hidden md:block border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
+      <div class="flex items-center gap-3 px-5 pt-5 mb-4">
+        <span class="inline-block px-2.5 py-1 text-xs font-semibold text-white rounded-md bg-green-600">Hard</span>
+        <p class="text-xs font-medium text-gray-700 uppercase tracking-wide">Data Structures and Algorithms</p>
       </div>
-      <div class="p-6">
-        <h3 class="text-lg font-bold mb-2">Design a food App</h3>
-        <p class="text-gray-600">We created this guide after speaking to our community...</p>
-      </div>
-    </div>
-
-    <!-- Medium Card -->
-    <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-      <div class="p-4 flex items-center gap-3">
-        <span class="inline-block px-2 py-1 text-xs font-semibold text-white rounded bg-badge-orange">Medium</span>
-        <p class="text-sm font-medium text-gray-700">DATA STRUCTURES AND ALGORITHMS</p>
-      </div>
-      <div class="p-6">
-        <h3 class="text-lg font-bold mb-2">Design a food App</h3>
-        <p class="text-gray-600">We created this guide after speaking to our community...</p>
+      <div class="px-5 pb-4">
+        <h3 class="text-base font-medium mb-2 text-gray-800">Design a Food App</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          We created this guide after speaking to our community of interviewees, including over 100 current and former Amazon engineers, as well as our corpus of mock interviews.
+        </p>
       </div>
     </div>
 
-    <!-- Hard Card (hidden on mobile) -->
-    <div class="hidden md:block border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-      <div class="p-4 flex items-center gap-3">
-        <span class="inline-block px-2 py-1 text-xs font-semibold text-white rounded bg-badge-green">Hard</span>
-        <p class="text-sm font-medium text-gray-700">DATA STRUCTURES AND ALGORITHMS</p>
+    <!-- Another Easy Card -->
+    <div class="hidden md:block border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
+      <div class="flex items-center gap-3 px-5 pt-5 mb-4">
+        <span class="inline-block px-2.5 py-1 text-xs font-semibold text-white rounded-md bg-blue-500">Easy</span>
+        <p class="text-xs font-medium text-gray-700 uppercase tracking-wide">Data Structures and Algorithms</p>
       </div>
-      <div class="p-6">
-        <h3 class="text-lg font-bold mb-2">Design a food App</h3>
-        <p class="text-gray-600">We created this guide after speaking to our community...</p>
+      <div class="px-5 pb-4">
+        <h3 class="text-base font-medium mb-2 text-gray-800">Design a Food App</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          We created this guide after speaking to our community of interviewees, including over 100 current and former Amazon engineers, as well as our corpus of mock interviews.
+        </p>
+      </div>
+    </div>
+
+    <!-- Another Medium Card -->
+    <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
+      <div class="flex items-center gap-3 px-5 pt-5 mb-4">
+        <span class="inline-block px-2.5 py-1 text-xs font-semibold text-white rounded-md bg-orange-500">Medium</span>
+        <p class="text-xs font-medium text-gray-700 uppercase tracking-wide">Data Structures and Algorithms</p>
+      </div>
+      <div class="px-5 pb-4">
+        <h3 class="text-base font-medium mb-2 text-gray-800">Design a Food App</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          We created this guide after speaking to our community of interviewees, including over 100 current and former Amazon engineers, as well as our corpus of mock interviews.
+        </p>
+      </div>
+    </div>
+
+    <!-- Another Hard Card -->
+    <div class="hidden md:block border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
+      <div class="flex items-center gap-3 px-5 pt-5 mb-4">
+        <span class="inline-block px-2.5 py-1 text-xs font-semibold text-white rounded-md bg-green-600">Hard</span>
+        <p class="text-xs font-medium text-gray-700 uppercase tracking-wide">Data Structures and Algorithms</p>
+      </div>
+      <div class="px-5 pb-4">
+        <h3 class="text-base font-medium mb-2 text-gray-800">Design a Food App</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          We created this guide after speaking to our community of interviewees, including over 100 current and former Amazon engineers, as well as our corpus of mock interviews.
+        </p>
+      </div>
+    </div>
+
+    <div class="hidden md:block border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
+      <div class="flex items-center gap-3 px-5 pt-5 mb-4">
+        <span class="inline-block px-2.5 py-1 text-xs font-semibold text-white rounded-md bg-blue-500">Easy</span>
+        <p class="text-xs font-medium text-gray-700 uppercase tracking-wide">Data Structures and Algorithms</p>
+      </div>
+      <div class="px-5 pb-4">
+        <h3 class="text-base font-medium mb-2 text-gray-800">Design a Food App</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          We created this guide after speaking to our community of interviewees, including over 100 current and former Amazon engineers, as well as our corpus of mock interviews.
+        </p>
+      </div>
+    </div>
+
+    <!-- Another Medium Card -->
+    <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
+      <div class="flex items-center gap-3 px-5 pt-5 mb-4">
+        <span class="inline-block px-2.5 py-1 text-xs font-semibold text-white rounded-md bg-orange-500">Medium</span>
+        <p class="text-xs font-medium text-gray-700 uppercase tracking-wide">Data Structures and Algorithms</p>
+      </div>
+      <div class="px-5 pb-4">
+        <h3 class="text-base font-medium mb-2 text-gray-800">Design a Food App</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          We created this guide after speaking to our community of interviewees, including over 100 current and former Amazon engineers, as well as our corpus of mock interviews.
+        </p>
+      </div>
+    </div>
+
+    <!-- Another Hard Card -->
+    <div class="hidden md:block border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
+      <div class="flex items-center gap-3 px-5 pt-5 mb-4">
+        <span class="inline-block px-2.5 py-1 text-xs font-semibold text-white rounded-md bg-green-600">Hard</span>
+        <p class="text-xs font-medium text-gray-700 uppercase tracking-wide">Data Structures and Algorithms</p>
+      </div>
+      <div class="px-5 pb-4">
+        <h3 class="text-base font-medium mb-2 text-gray-800">Design a Food App</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          We created this guide after speaking to our community of interviewees, including over 100 current and former Amazon engineers, as well as our corpus of mock interviews.
+        </p>
+      </div>
+    </div>
+
+    <div class="hidden md:block border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
+      <div class="flex items-center gap-3 px-5 pt-5 mb-4">
+        <span class="inline-block px-2.5 py-1 text-xs font-semibold text-white rounded-md bg-blue-500">Easy</span>
+        <p class="text-xs font-medium text-gray-700 uppercase tracking-wide">Data Structures and Algorithms</p>
+      </div>
+      <div class="px-5 pb-4">
+        <h3 class="text-base font-medium mb-2 text-gray-800">Design a Food App</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          We created this guide after speaking to our community of interviewees, including over 100 current and former Amazon engineers, as well as our corpus of mock interviews.
+        </p>
+      </div>
+    </div>
+
+    <!-- Another Medium Card -->
+    <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
+      <div class="flex items-center gap-3 px-5 pt-5 mb-4">
+        <span class="inline-block px-2.5 py-1 text-xs font-semibold text-white rounded-md bg-orange-500">Medium</span>
+        <p class="text-xs font-medium text-gray-700 uppercase tracking-wide">Data Structures and Algorithms</p>
+      </div>
+      <div class="px-5 pb-4">
+        <h3 class="text-base font-medium mb-2 text-gray-800">Design a Food App</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          We created this guide after speaking to our community of interviewees, including over 100 current and former Amazon engineers, as well as our corpus of mock interviews.
+        </p>
+      </div>
+    </div>
+
+    <!-- Another Hard Card -->
+    <div class="hidden md:block border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
+      <div class="flex items-center gap-3 px-5 pt-5 mb-4">
+        <span class="inline-block px-2.5 py-1 text-xs font-semibold text-white rounded-md bg-green-600">Hard</span>
+        <p class="text-xs font-medium text-gray-700 uppercase tracking-wide">Data Structures and Algorithms</p>
+      </div>
+      <div class="px-5 pb-4">
+        <h3 class="text-base font-medium mb-2 text-gray-800">Design a Food App</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          We created this guide after speaking to our community of interviewees, including over 100 current and former Amazon engineers, as well as our corpus of mock interviews.
+        </p>
       </div>
     </div>
 
   </div>
     </div>
+
 
 
 
@@ -319,47 +383,54 @@
 
     <!--            customer review                   -->
     <div class="bg-gray-100 py-16 px-6 sm:px-8 lg:px-20 font-sora">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
-            
-            <!-- Video Div -->
-            <div class="bg-gray-300 rounded-r-full overflow-hidden w-full md:w-1/2 h-64 flex items-center justify-center">
-            <!-- Replace with actual video element or thumbnail if needed -->
-            <video class="w-full h-full object-cover" autoplay>
-                <source src="your-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            </div>
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
 
-            <!-- Text Content -->
-            <div class="w-full md:w-1/2 space-y-4 text-left">
-            <p class="text-gray-700 text-lg">
-                “After interviewing candidates on Intervue, we were able to convert at least 5% of people from our application base to hire.”
-            </p>
-            <h3 class="text-xl font-semibold text-gray-900">Niket Gupta</h3>
-            <p class="text-gray-600">Group head of talent acquisition, Yubi</p>
-            <a href="#" class="text-blue-400 font-medium flex items-center space-x-2 hover:underline">
-                <span>See more customer stories</span>
-                <i class="fas fa-arrow-right text-sm"></i>
-            </a>
-            </div>
-            
+        <!-- Video Section (55%) -->
+        <div class="basis-[55%] h-64 relative rounded-r-full overflow-hidden bg-gray-300">
+          <video
+            id="testimonialVideo"
+            class="w-full h-full object-cover rounded-r-full cursor-pointer"
+            poster="https://d2b1cooxpkirg1.cloudfront.net/publicAssets/homepage/testimonials/yubi.webp"
+            onclick="this.play(); this.setAttribute('controls', true);"
+            preload="none"
+          >
+            <source src="https://dersyb7nfifdf.cloudfront.net/public/assets/videos/Yubi-Niket.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
+
+        <!-- Text Section (45%) -->
+        <div class="basis-[45%] space-y-4 text-left">
+          <p class="text-gray-700 text-lg">
+            “After interviewing candidates on Intervue, we were able to convert at least 5% of people from our application base to hire.”
+          </p>
+          <h3 class="text-xl font-semibold text-gray-900">Niket Gupta</h3>
+          <p class="text-gray-600">Group head of talent acquisition, Yubi</p>
+          <a href="#" class="text-blue-400 font-medium flex items-center space-x-2 hover:underline">
+            <span>See more customer stories</span>
+            <i class="fas fa-arrow-right text-sm"></i>
+          </a>
+        </div>
+
+      </div>
     </div>
 
 
 
 
-    <!--            know more about                  -->
+
+
+    <!--            Explore more products                  -->
     <div class="rounded-lg py-12 px-6 sm:px-8 lg:px-20 font-sora max-w-7xl mx-auto mt-16">
-        <h2 class="text-2xl text-center font-semibold text-gray-800 mb-10">
+        <h2 class="text-2xl text-center font-medium text-gray-800 mb-10">
             Explore more products of Intervue
         </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
             <div class="p-6 rounded-lg border hover:shadow-[6px_6px_12px_rgba(0,0,0,0.1)] transition-shadow duration-300">
-            <img src="your-image1.jpg" alt="Product 1" class="rounded-md mb-4 w-full h-40 object-cover" />
-            <h3 class="text-lg font-semibold text-gray-900 mb-2">On Demand</h3>
+            <img src="image1.png" alt="Product 1" class="rounded-md mb-4 w-full h-40 object-cover" />
+            <h3 class="text-lg font-medium text-gray-900 mb-2">On Demand</h3>
             <p class="text-gray-600 mb-6">
                 Save 90% of engineering & recruitment bandwidth, outsource candidate interview to us
             </p>
@@ -370,8 +441,8 @@
             </div>
 
             <div class="p-6 rounded-lg border hover:shadow-[6px_6px_12px_rgba(0,0,0,0.1)] transition-shadow duration-300">
-            <img src="your-image2.jpg" alt="Product 2" class="rounded-md mb-4 w-full h-40 object-cover" />
-            <h3 class="text-lg font-semibold text-gray-900 mb-2">On Demand</h3>
+            <img src="image2.png" alt="Product 2" class="rounded-md mb-4 w-full h-40 object-cover" />
+            <h3 class="text-lg font-medium text-gray-900 mb-2">On Demand</h3>
             <p class="text-gray-600 mb-6">
                 Save 90% of engineering & recruitment bandwidth, outsource candidate interview to us
             </p>
@@ -382,8 +453,8 @@
             </div>
 
             <div class="p-6 rounded-lg border hover:shadow-[6px_6px_12px_rgba(0,0,0,0.1)] transition-shadow duration-300">
-            <img src="your-image3.jpg" alt="Product 3" class="rounded-md mb-4 w-full h-40 object-cover" />
-            <h3 class="text-lg font-semibold text-gray-900 mb-2">On Demand</h3>
+            <img src="image3.png" alt="Product 3" class="rounded-md mb-4 w-full h-40 object-cover" />
+            <h3 class="text-lg font-medium text-gray-900 mb-2">On Demand</h3>
             <p class="text-gray-600 mb-6">
                 Save 90% of engineering & recruitment bandwidth, outsource candidate interview to us
             </p>
@@ -400,28 +471,28 @@
 
     <!-- FAQs-->
     <!-- FAQ Section -->
-<div class="bg-[#F5E7E7] max-w-7xl mx-auto px-6 sm:px-8 lg:px-20 py-16 font-sora">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-
+<div class="bg-[#F5E7E7] max-w-full mx-auto px-6 sm:px-8 lg:px-20 py-16 font-sora">
+  <div class="grid w-full grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 md:gap-0">
     <!-- Left Section for Desktop -->
-    <div class="hidden md:block">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">FAQs</h2>
+    <div class="hidden md:flex flex-col items-start justify-between h-full mr-12">
+      <h2 class="text-2xl text-gray-800 mb-4">FAQs</h2>
       <p class="text-gray-600 mb-6">
         Here are frequently asked questions to clear all the doubts.
       </p>
-      <p class="text-gray-700 mb-4">Still have doubts?</p>
-      <div class="flex items-center space-x-3 text-blue-400">
-        <i class="fas fa-phone text-lg"></i>
-        <p class="text-sm">Talk to our representative</p>
+      <div>
+        <p class="text-gray-700 text-md font-medium">Still have doubts?</p>
+        <div class="flex items-center space-x-1 text-blue-500">
+          <i class="fas fa-phone text-lg"></i>
+          <p class="font-medium">Talk to our representative</p>
+        </div>
       </div>
     </div>
 
     <!-- Right Section (Questions) -->
-    <div class="space-y-6">
-
+    <div class="space-y-4">
       <!-- Mobile Heading and Description -->
       <div class="md:hidden">
-        <h2 class="text-2xl font-semibold text-gray-800 mb-4">FAQs</h2>
+        <h2 class="text-2xl font-medium text-gray-800 mb-4">FAQs</h2>
         <p class="text-gray-600 mb-6">
           Here are frequently asked questions to clear all the doubts.
         </p>
@@ -463,7 +534,7 @@
         <p class="mt-2 text-gray-700 block md:hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, suscipit.</p>
       </div>
 
-      <!-- Mobile "Still have doubts?" section (only visible in mobile) -->
+      <!-- only visible in mobile -->
       <div class="block md:hidden pt-6">
         <p class="text-gray-700 mb-4">Still have doubts?</p>
         <div class="flex items-center space-x-3 text-blue-400">
@@ -471,103 +542,117 @@
           <p class="text-sm">Talk to our representative</p>
         </div>
       </div>
-
     </div>
   </div>
 </div>
 
-
     <!--               Footer               -->
-    <div class="bg-[#27282C] text-white py-10 px-6 sm:px-12 font-sora">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+    <div class="bg-[#27282C] w-full   text-white py-10 md:py-20 px-6 font-sora">
+      <div class="w-4/5 md:w-5/6  mx-auto">
+      <div class="mb-10 md:mb-6 flex items-center justify-center md:justify-start  w-full">
 
-    <div class="space-y-6 md:mr-10">
-      <h2 class="text-2xl font-bold">Intervue</h2>
+        <img src="https://uploads-ssl.webflow.com/608e9cc36cbcc089f0998643/648175fc7332de3fb931061a_intervue.svg" alt="Intervue Logo" class="h-6 w-auto" />
+      </div>
+   
+    <div class="w-full grid md:grid-cols-2  pb-4">
 
-      <div class="hidden md:flex space-x-4 text-xl text-gray-300 pt-2">
+        <div class="w-5/6 pb-6 md:pb-0 flex flex-col  justify-between h-full">
+
+          <!-- <div class="flex md:hidden space-x-4 text-xl text-gray-300 pt-2">
+            <i class="fab fa-facebook cursor-pointer hover:text-blue-500"></i>
+            <i class="fab fa-instagram cursor-pointer hover:text-pink-500"></i>
+            <i class="fab fa-linkedin cursor-pointer hover:text-blue-400"></i>
+            <i class="fab fa-pinterest cursor-pointer hover:text-red-500"></i>
+          </div> -->
+          <div class="hidden  md:flex justify-between text-sm text-gray-300 pt-2 md:pt-0">
+            <a class="cursor-pointer hover:text-blue-500"> Facebook</a>
+            <a class="cursor-pointer hover:text-pink-500">Instagram</a>
+            <a class="cursor-pointer hover:text-blue-400">Linkedin</a>
+            <a class="cursor-pointer hover:text-red-500">Pinterest</a>
+          </div>
+          <div class="">
+
+            <h3 class="text-md text-yellow-400 font-semibold">Hire better & faster</h3>
+            <div class="relative w-11/12  md:w-3/5 ">
+              <input type="text" placeholder="Enter your email address"
+                    class="w-full bg-transparent border-b border-gray-500 py-2 text-sm pr-10 focus:outline-none text-white placeholder-gray-400" />
+              <i class="fas fa-paper-plane absolute right-0 top-2 text-yellow-400 cursor-pointer"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Link Sections -->
+        <div class="w-full">
+          <div class="w-screen p-2 md:p-0 md:w-full  grid grid-cols-2 justify-between sm:grid-cols-2 md:grid-cols-4  gap-y-10">
+            <div>
+              <h4 class="font-medium text-sm mb-2">Company</h4>
+              <ul class="space-y-2 text-xs text-gray-300">
+                <li><a href="#" class="hover:text-yellow-400">So gehts</a></li>
+                <li><a href="#" class="hover:text-yellow-400">dvfdvdv</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Aligner</a></li>
+                <li><a href="#" class="hover:text-yellow-400">hgdsbcdsj</a></li>
+                <li><a href="#" class="hover:text-yellow-400">hjadgk</a></li>
+              </ul>
+            </div>
+
+            <!-- Resources -->
+            <div>
+              <h4 class="font-medium text-sm mb-2">Resources</h4>
+              <ul class="space-y-2 text-xs text-gray-300">
+                <li><a href="#" class="hover:text-yellow-400">Blog</a></li>
+                <li><a href="#" class="hover:text-yellow-400">FAQ</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Lift Media</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Offene Stellen</a></li>
+              </ul>
+            </div>
+
+            <!-- Product 1 -->
+            <div>
+              <h4 class="font-medium text-sm mb-2">Product</h4>
+              <ul class="space-y-2 text-xs text-gray-300">
+                <li><a href="#" class="hover:text-yellow-400">Gratis Termin</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Feenau Hsiem</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Ushl slps</a></li>
+              </ul>
+            </div>
+
+            <!-- Product 2 -->
+            <div>
+              <h4 class="font-medium text-sm mb-2">Product</h4>
+              <ul class="space-y-2 text-xs text-gray-300">
+                <li><a href="#" class="hover:text-yellow-400">Blog</a></li>
+                <li><a href="#" class="hover:text-yellow-400">FAQ</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Lift Media</a></li>
+                <li><a href="#" class="hover:text-yellow-400">offence Stellen</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Presse kit</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+     </div>
+
+      <div class="flex md:hidden justify-center mt-10 space-x-6 text-xl text-gray-300">
         <i class="fab fa-facebook cursor-pointer hover:text-blue-500"></i>
         <i class="fab fa-instagram cursor-pointer hover:text-pink-500"></i>
         <i class="fab fa-linkedin cursor-pointer hover:text-blue-400"></i>
         <i class="fab fa-pinterest cursor-pointer hover:text-red-500"></i>
       </div>
 
-      <h3 class="text-md text-yellow-400 font-semibold">Hire better & faster</h3>
-      <div class="relative w-full max-w-xs">
-        <input type="text" placeholder="Your email"
-               class="w-full bg-transparent border-b border-gray-500 py-2 pl-2 pr-10 focus:outline-none text-white placeholder-gray-400" />
-        <i class="fas fa-paper-plane absolute top-2 right-3 text-yellow-400 cursor-pointer"></i>
-      </div>
-    </div>
-
-    <!-- Link Sections -->
-    <div class="md:col-span-3">
-      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10">
-        <div>
-          <h4 class="font-bold text-lg mb-2">Company</h4>
-          <ul class="space-y-2 text-sm text-gray-300">
-            <li><a href="#" class="hover:text-yellow-400">fdvfdb</a></li>
-            <li><a href="#" class="hover:text-yellow-400">dvfdvdv</a></li>
-            <li><a href="#" class="hover:text-yellow-400">fdhvfj</a></li>
-            <li><a href="#" class="hover:text-yellow-400">hgdsbcdsj</a></li>
-          </ul>
-        </div>
-
-        <!-- Resources -->
-        <div>
-          <h4 class="font-bold text-lg mb-2">Resources</h4>
-          <ul class="space-y-2 text-sm text-gray-300">
-            <li><a href="#" class="hover:text-yellow-400">Blog</a></li>
-            <li><a href="#" class="hover:text-yellow-400">FAQ</a></li>
-            <li><a href="#" class="hover:text-yellow-400">Lift Media</a></li>
-            <li><a href="#" class="hover:text-yellow-400">Offence Stellen</a></li>
-          </ul>
-        </div>
-
-        <!-- Product 1 -->
-        <div>
-          <h4 class="font-bold text-lg mb-2">Product</h4>
-          <ul class="space-y-2 text-sm text-gray-300">
-            <li><a href="#" class="hover:text-yellow-400">Blog</a></li>
-            <li><a href="#" class="hover:text-yellow-400">FAQ</a></li>
-            <li><a href="#" class="hover:text-yellow-400">Lift Media</a></li>
-            <li><a href="#" class="hover:text-yellow-400">Offence Stellen</a></li>
-          </ul>
-        </div>
-
-        <!-- Product 2 -->
-        <div>
-          <h4 class="font-bold text-lg mb-2">Product</h4>
-          <ul class="space-y-2 text-sm text-gray-300">
-            <li><a href="#" class="hover:text-yellow-400">Blog</a></li>
-            <li><a href="#" class="hover:text-yellow-400">FAQ</a></li>
-            <li><a href="#" class="hover:text-yellow-400">Lift Media</a></li>
-            <li><a href="#" class="hover:text-yellow-400">Offence Stellen</a></li>
-          </ul>
+        <!-- Bottom Row -->
+      <div class="mt-10 pt-6 text-xs text-gray-400">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center ">
+          <p>@2023 Intervue. Crafted by great minds</p>
+          <div class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-1">
+            <p>Dateenschu</p>
+            <p>Impressum</p>
+            <p>Cookie Policy</p>
+            <p>AGBs</p>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <div class="flex md:hidden justify-center mt-10 space-x-6 text-xl text-gray-300">
-    <i class="fab fa-facebook cursor-pointer hover:text-blue-500"></i>
-    <i class="fab fa-instagram cursor-pointer hover:text-pink-500"></i>
-    <i class="fab fa-linkedin cursor-pointer hover:text-blue-400"></i>
-    <i class="fab fa-pinterest cursor-pointer hover:text-red-500"></i>
-  </div>
-
-  <!-- Bottom Row -->
-  <div class="mt-10 pt-6 border-t border-gray-600 text-sm text-gray-400">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3">
-      <p>@2023 Intervue. Crafted by great minds</p>
-      <div class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-1">
-        <p>fdhvbej</p>
-        <p>dchde ecn</p>
-        <p>Cookie Policy</p>
       </div>
     </div>
-  </div>
 </div>
-
 
 
 
